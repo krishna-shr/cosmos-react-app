@@ -1,0 +1,12 @@
+{
+    "apps": [
+        {
+            "name": "react_app",
+            "script": "dist/server/main.js",
+            "exec_mode": "cluster",
+            "instances": 1,
+            "watch": false,
+            "ignore_watch": ["imageUploads", "inventoryUploads", "uploads"]
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+{
+    "compileOnSave": false,
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    },
+    "compilerOptions": {
+        "baseUrl": "./",
+        "removeComments": true,
+        "paths": {
+            "@typings/*": ["./src/client/typings/*"],
+            "@store/*": ["./src/client/store/*"],
+            "@constants/*": ["./src/client/constants/*"],
+            "@shared/*": ["./src/client/shared/*"],
+            "@pages/*": ["./src/client/pages/*"],
+            "@hooks/*": ["./src/client/hooks/*"],
+            "@utils/*": ["./src/client/utils/*"],
+            "@assets/*": ["./src/client/assets/*"]
+        },
+        "typeRoots": ["./src/client/typings", "node_modules/@types"],
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es2015",
+        "module": "esnext",
+        "jsx": "react-jsx",
+        "lib": ["es2017", "dom", "ES2020"],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "outDir": "build",
+        "checkJs": false,
+        "allowJs": false,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": false,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "isolatedModules": true,
+        "noEmit": false,
+        "noImplicitAny": false,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noUncheckedIndexedAccess": true,
+        "resolveJsonModule": true
+    },
+    "exclude": ["node_modules", "./config/**/*.js"],
+    "include": [
+        "./src/**/*.js",
+        "./src/**/*.jsx",
+        "./src/**/*.ts",
+        "./src/**/*.tsx",
+        "./config/**/*.ts"
+    ]
+}
