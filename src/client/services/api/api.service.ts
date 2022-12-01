@@ -53,14 +53,14 @@ export const makePost = (
     url: string,
     data: unknown,
     headers = {},
-    params = [],
+    params = []
 ): Promise<IResponse> => {
     const reqOptions: IRequest = {
         method: 'POST',
         url,
         data,
         headers: { ...headers },
-        params
+        params,
     };
     return axiosHandler(reqOptions);
 };

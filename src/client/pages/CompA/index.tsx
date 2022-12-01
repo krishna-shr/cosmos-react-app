@@ -8,12 +8,10 @@ export const CompA: FC = () => {
     const navigate = useNavigate();
     return data?.status?.toLowerCase() === 'ok' ? (
         <Wrapper>
-            <Title>
-                {data.msg}
-            </Title>
+            <Title>{data.msg}</Title>
             <Button onClick={() => navigate(-1)}>Back</Button>
         </Wrapper>
-    ) : null
+    ) : null;
 };
 
 export default CompA;

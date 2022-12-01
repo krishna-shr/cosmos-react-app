@@ -12,7 +12,7 @@ const useAActionCreator = (): IAAction => {
 
     const getData = async (): Promise<void> => {
         try {
-            const res = await makeGet(apiRoutes.GET_DATA)
+            const res = await makeGet(apiRoutes.GET_DATA);
             dispatch({
                 type: HomeAction.FETCH_DATA,
                 payload: res,

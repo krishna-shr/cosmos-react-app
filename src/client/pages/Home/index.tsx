@@ -7,12 +7,10 @@ export const Home: FC = () => {
 
     return (
         <Wrapper>
-            <Title>
-                Welcome to Meesho React App Boiler plate.
-            </Title>
+            <Title>Welcome to Meesho React App Boiler plate.</Title>
             <Button onClick={() => navigate('/a')}>Show Comp A</Button>
         </Wrapper>
-    )
+    );
 };
 
 export default Home;

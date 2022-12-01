@@ -19,7 +19,7 @@ commonMiddleware(app);
 app.use('/api', appRoute);
 
 app.get(`${BASE_PATH}/*`, (_req, res) => {
-    console.log("ola");
+    console.log('ola');
     res.sendFile(path.join(__dirname, '..', '..', 'dist/index.html'));
 });
 

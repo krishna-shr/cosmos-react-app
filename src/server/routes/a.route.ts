@@ -1,6 +1,4 @@
-import {
-    getData
-} from '../controllers/a.controller';
+import { getData } from '../controllers/a.controller';
 import type { AppRoute } from '../typings/middleware';
 
 export const routes: AppRoute[] = [

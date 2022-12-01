@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-    routePath,
-} from '@constants/container.constants';
+import { routePath } from '@constants/container.constants';
 import Home from '@pages/Home';
 import CompA from '@pages/CompA';
 

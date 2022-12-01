@@ -1,0 +1,12 @@
+# Add files here to ignore them from prettier formatting
+
+/dist
+/coverage
+package.json
+.gitignore
+.prettierignore
+env.sample
+.git/
+docs/pull_request_template.md
+node_modules
+.eslintignore

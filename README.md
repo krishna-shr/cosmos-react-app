@@ -1,21 +1,44 @@
-## Folder Structure of a Component
+# web cosmos react-app
 
+This file includes the global command for [React App]<br>
+Please refer to the documentation:
+
+- No configuration or complicated folder structures, only the files you need to build your app.<br>
+Once the installation is done, you can open your project folder:
+
+```sh
+cd my-app
 ```
-container
-    └──config
-        └──webpack
-            ├──webpack.config.js
-            └──webpack.config.prod.js
-    └──libs/crystal
-          └──src
-              └──lib
-                  └──molecules
-                        └──Button                   (component name)
-                            ├──index.ts             (top level exports/re-exports)
-                            ├──Button.tsx           (Button implementation)
-                            ├──Button.stories.tsx   (Button components for stories)
-                            ├──Button.config.ts     (Config override for MUI Button globally)
-                            ├──Button.styled.tsx    (Providing styles for component through styled components)
-                            ├──ButtonProps.d.ts     (Providing typings for props and elements used in component)
-                            ├──Button.spec.tsx      (Test cases for the component)
-```
+
+Inside the newly created project, you can run some built-in commands:
+
+### `npm start`
+
+Runs the app in development mode.<br>
+Open [http://localhost:8082](http://localhost:8082) to view it in the browser.
+By default 8082 port is being used. If you want to change, then you can do it in the file 
+ `config/webpack/development/webpack.dev.client.js`
+The page will automatically reload if you make changes to the code.<br>
+You will see the build errors and lint warnings in the console.
+
+### `npm run build-prod`
+
+Build the app in production mode. A new dist folder will be created with all the required files.<br>
+
+### `npm run serve:server`
+
+Runs the app in production mode fromo dist folder<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+By default 3000 port is being used. If you want to change, then you can do it in the .env file 
+
+### `npm run test`
+
+This command will the look out for all the unit test cases written.
+
+### `npm run test-report`
+
+The command to find out the coverage of unit test cases in your newly created codebase.
+
+### `npm run lint`
+
+The command to identify all the eslint errors in your codebase.

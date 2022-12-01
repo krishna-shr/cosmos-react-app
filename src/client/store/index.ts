@@ -6,9 +6,12 @@ const devExtn =
     (window as any).__REDUX_DEVTOOLS_EXTENSION__ &&
     process.env.ENVIRONMENT !== 'production'
         ? (window as any).__REDUX_DEVTOOLS_EXTENSION__()
-        : (f) => f
+        : (f) => f;
 
-export const store = createStore(rootReducer, compose(applyMiddleware(thunk), devExtn))
+export const store = createStore(
+    rootReducer,
+    compose(applyMiddleware(thunk), devExtn)
+);
 
 export default store;
 

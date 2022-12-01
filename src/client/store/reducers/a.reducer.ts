@@ -4,7 +4,7 @@ import type { IAction, IAState } from '../typings/store';
 const initState: IAState = {
     data: {
         status: '',
-        msg: ''
+        msg: '',
     },
     hasError: false,
     error: {},

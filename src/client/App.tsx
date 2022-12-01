@@ -1,34 +1,18 @@
-import React from 'react';
-import {
-    BrowserRouter,
-    Routes,
-    Route,
-} from 'react-router-dom';
+import React, { ReactElement } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
-import appRoutes, { IRoute } from './routes';
 import ErrorBoundary from '@shared/ErrorBoundary';
+import appRoutes, { IRoute } from './routes';
 
 type ICreateRouteProps = {
     route: IRoute;
 };
 
-const Loader = () => {
-    return (
-        <div>Loading....</div>
-    )
-}
+const Loader = (): ReactElement => <div>Loading....</div>;
 
-const createRoute = ({
-    route,
-}: ICreateRouteProps): React.ReactNode => (
-    <Route
-        key={route.path}
-        path={route.path}
-        element={
-            <route.element/>
-        }
-    >
+const createRoute = ({ route }: ICreateRouteProps): React.ReactNode => (
+    <Route key={route.path} path={route.path} element={<route.element />}>
         {route.children &&
             route.children.map((childRoute) =>
                 createRoute({ route: childRoute })
@@ -36,19 +20,17 @@ const createRoute = ({
     </Route>
 );
 
-const Root = (): React.ReactElement => {
-    return (
-        <React.Suspense fallback={<Loader />}>
-            <Routes>
-                {appRoutes.map((route) =>
-                    createRoute({
-                        route
-                    })
-                )}
-            </Routes>
-        </React.Suspense>
-    )
-};
+const Root = (): React.ReactElement => (
+    <React.Suspense fallback={<Loader />}>
+        <Routes>
+            {appRoutes.map((route) =>
+                createRoute({
+                    route,
+                })
+            )}
+        </Routes>
+    </React.Suspense>
+);
 
 const App = (): React.ReactElement => {
     const baseP = `${process.env.BASE_PATH}/`;
