@@ -10,7 +10,19 @@ Once the installation is done, you can open your project folder:
 cd my-app
 ```
 
-Inside the newly created project, you can run some built-in commands:
+Inside the newly created project, you will find out one .env file which contains alredy set entries like :
+
+```sh
+NODE_SERVER_PORT=3000
+ENVIRONMENT=localhost
+BASE_PATH=
+```
+Here NODE_SERVER_PORT is the port on which your node server will run.
+ENVIRONMENT will be used by webpack to check if dev or prod mode build is demanded.
+BASE_PATH is the public base path of all the static assets being served.
+
+
+You can run some built-in commands:
 
 ### `npm start`
 
@@ -27,7 +39,7 @@ Build the app in production mode. A new dist folder will be created with all the
 
 ### `npm run serve:server`
 
-Runs the app in production mode fromo dist folder<br>
+Runs the app in production mode from dist folder<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 By default 3000 port is being used. If you want to change, then you can do it in the .env file 
 
